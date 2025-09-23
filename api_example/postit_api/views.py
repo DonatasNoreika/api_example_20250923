@@ -5,6 +5,6 @@ from .models import Post, Comment, PostLike, CommentLike
 
 # Create your views here.
 
-class PostList(generics.ListAPIView):
+class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
